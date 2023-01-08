@@ -1,0 +1,12 @@
+<table>
+    <tr>
+      <th>Day</th>
+      <th>Temperature</th>
+      <th>Precipitation</th>
+    </tr>
+    <tr *ngFor="let day of forecast">
+      <td>{{ day.day }}</td>
+      <td>{{ day.temperature }}</td>
+      <td>{{ day.precipitation }}</td>
+    </tr>
+  </table>
