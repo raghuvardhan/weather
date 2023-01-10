@@ -16,15 +16,13 @@ export class WeatherComponent implements OnInit {
   constructor(private weatherService: WeatherService, private locationService: LocationService) { }
 
   ngOnInit() {
-    this.locationService.getCurrentLocation().subscribe((data: any) => {
-      this.weatherService.getCurrentWeather(data[0].lat, data[0].lon).subscribe((data: any) => {
-        console.log(data);
-        
-        this.temperature = data.main.temp;
-        this.humidity = data.main.humidity;
-        this.windSpeed = data.wind.speed;
+      this.weatherService.getCurrentWeather().subscribe((data: any) => {    
+        data.subscribe((data: any) => {
+          this.temperature = data.main.temp;
+          this.humidity = data.main.humidity;
+          this.windSpeed = data.wind.speed;
+        });
       }
       );
-    });
   }
 }
