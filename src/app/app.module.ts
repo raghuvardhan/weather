@@ -7,18 +7,34 @@ import { WeatherComponent } from './weather/weather.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ForecastComponent } from './forecast/forecast.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CurrentWeatherComponent } from './components/main/components/current-weather/current-weather.component';
+import { DailyForecastComponent } from './components/main/components/daily-forecast/daily-forecast.component';
+import { HourlyForecastComponent } from './components/main/components/hourly-forecast/hourly-forecast.component';
+import { WeatherMapComponent } from './components/main/components/weather-map/weather-map.component';
+import { AirQualityComponent } from './components/main/components/air-quality/air-quality.component';
+import { SunriseSunsetComponent } from './components/main/components/sunrise-sunset/sunrise-sunset.component';
+import { UvIndexComponent } from './components/main/components/uv-index/uv-index.component';
+import { FooterComponent } from './components/main/components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherComponent,
     ForecastComponent,
-    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    HeaderComponent,
+    CurrentWeatherComponent,
+    DailyForecastComponent,
+    HourlyForecastComponent,
+    WeatherMapComponent,
+    AirQualityComponent,
+    SunriseSunsetComponent,
+    UvIndexComponent,
+    FooterComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,15 @@
+.search-bar {
+    display: flex;
+    /* Additional styling */
+}
+
+.search-bar input {
+    padding: 5px;
+    margin-right: 5px;
+    /* Additional styling */
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    /* Additional styling */
+}
