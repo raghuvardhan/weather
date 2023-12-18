@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SunriseSunsetService } from './services/sunrise-sunset.service';
 
 @Component({
   selector: 'app-sunrise-sunset',
@@ -8,5 +9,18 @@ import { Component } from '@angular/core';
   styleUrl: './sunrise-sunset.component.css'
 })
 export class SunriseSunsetComponent {
+  sunrise!: string;
+  sunset!: string;
 
+  constructor(private sunriseSunsetService: SunriseSunsetService) {}
+
+  ngOnInit(): void {
+    // Replace with the actual latitude and longitude
+    this.sunriseSunsetService.getSunriseSunset(35.6895, 139.6917).subscribe(data => {
+      const sunriseDate = new Date(data.sys.sunrise * 1000);
+      const sunsetDate = new Date(data.sys.sunset * 1000);
+      this.sunrise = sunriseDate.toLocaleTimeString();
+      this.sunset = sunsetDate.toLocaleTimeString();
+    });
+  }
 }
