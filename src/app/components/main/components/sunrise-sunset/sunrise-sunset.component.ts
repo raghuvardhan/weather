@@ -16,7 +16,7 @@ export class SunriseSunsetComponent {
 
   ngOnInit(): void {
     // Replace with the actual latitude and longitude
-    this.sunriseSunsetService.getSunriseSunset(35.6895, 139.6917).subscribe(data => {
+    this.sunriseSunsetService.getSunriseSunset().subscribe(data => {
       const sunriseDate = new Date(data.sys.sunrise * 1000);
       const sunsetDate = new Date(data.sys.sunset * 1000);
       this.sunrise = sunriseDate.toLocaleTimeString();

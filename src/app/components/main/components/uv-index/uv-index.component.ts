@@ -15,7 +15,7 @@ export class UvIndexComponent {
 
   ngOnInit(): void {
     // Replace with actual latitude and longitude
-    this.uvIndexService.getUvIndex(35.6895, 139.6917).subscribe(data => {
+    this.uvIndexService.getUvIndex().subscribe(data => {
       this.uvIndexData = data;
     });
   }
