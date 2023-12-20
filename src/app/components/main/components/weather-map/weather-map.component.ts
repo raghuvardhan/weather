@@ -27,6 +27,5 @@ export class WeatherMapComponent implements OnInit {
       attribution: '© OpenStreetMap contributors'
     }).addTo(this.map);
 
-    // You can add weather data layers here
   }
 }

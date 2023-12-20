@@ -11,7 +11,7 @@ export class LocationService {
   constructor(private http: HttpClient) { }
 
   getCurrentLocation() {
-    return this.http.get('http://api.openweathermap.org/geo/1.0/direct?q=London&limit=1&appid=' + this.apiKey);
+    return this.http.get('http://api.openweathermap.org/geo/1.0/direct?q=Bangalore&limit=1&appid=' + this.apiKey);
   }
 
 }
