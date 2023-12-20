@@ -1,9 +1,10 @@
 <div class="daily-forecast">
     <h2>Daily Forecast</h2>
     <ul>
-        <li>Monday - High: 25°C, Low: 18°C - Rainy</li>
-        <li>Tuesday - High: 24°C, Low: 17°C - Cloudy</li>
-        <li>{{dailyForecast}}</li>
-        <!-- Add more daily data -->
+        <li *ngFor="let forecast of dailyForecast">
+            <span>Temperature: {{forecast.temp.day}} </span>
+            <span>Humidity: {{forecast.humidity}} </span>
+            <span>WindSpeed: {{forecast.wind_speed}} </span>
+        </li>        
     </ul>
 </div>

@@ -17,9 +17,7 @@ export class HourlyForecastComponent {
   ngOnInit(): void {
     this.hourlyForecastService.getHourlyForecast().subscribe(data => {
       data.subscribe((forecast: any) => {
-        this.hourlyForecast = forecast.hourly;
-        console.log(forecast);
-      
+        this.hourlyForecast = forecast.hourly;      
       })
     });
   }
