@@ -15,7 +15,9 @@ export class AirQualityComponent {
 
   ngOnInit(): void {
     this.airQualityService.getAirQuality().subscribe(data => {
-      this.airQualityData = data;
+      data.subscribe((quality: any) => {
+        this.airQualityData = quality.list[0].main.aqi;
+      })
     });
   }
 }
