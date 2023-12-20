@@ -15,7 +15,9 @@ export class UvIndexComponent {
 
   ngOnInit(): void {
     this.uvIndexService.getUvIndex().subscribe(data => {
-      this.uvIndexData = data;
+      data.subscribe((uvIndex: any) => {
+        this.uvIndexData = uvIndex.value;
+      })
     });
   }
 }
