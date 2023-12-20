@@ -14,8 +14,7 @@ export class AirQualityComponent {
   constructor(private airQualityService: AirQualityService) {}
 
   ngOnInit(): void {
-    // Replace with actual latitude and longitude
-    this.airQualityService.getAirQuality(35.6895, 139.6917).subscribe(data => {
+    this.airQualityService.getAirQuality().subscribe(data => {
       this.airQualityData = data;
     });
   }
