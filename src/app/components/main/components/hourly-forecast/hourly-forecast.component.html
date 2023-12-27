@@ -2,6 +2,7 @@
     <h2>Hourly Forecast</h2>
     <ul class="horizontal-list">
         <li *ngFor="let forecast of hourlyForecast | slice:0:12" class="list-item" >
+            <p>{{forecast.dt*1000 | date:'hh:mm a'}}
             <p>{{forecast.temp | number:'1.0-0'}}&deg;C </p>
             <p>Humidity: {{forecast.humidity}} </p>
             <p>WindSpeed: {{forecast.wind_speed}} </p>
