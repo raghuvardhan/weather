@@ -18,6 +18,7 @@ export class DailyForecastComponent {
     this.dailyForecastService.getDailyForecast().subscribe(data => {
       data.subscribe((forecast: any) => {
         this.dailyForecast = forecast.daily;
+        console.log(this.dailyForecast);
       })
     });
   }

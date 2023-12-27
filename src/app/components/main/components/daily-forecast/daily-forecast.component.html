@@ -2,7 +2,8 @@
     <h2>Daily Forecast</h2>
     <ul class="horizontal-list">
         <li class="list-item" *ngFor="let forecast of dailyForecast">
-            <p>{{forecast.temp.day}}&deg;C </p>
+            <p>{{forecast.dt*1000 | date:'d MMM'}}
+            <p>{{forecast.temp.day | number:'1.0-0'}}&deg;C </p>
             <p>Humidity: {{forecast.humidity}} </p>
             <p>WindSpeed: {{forecast.wind_speed}} </p>
         </li>        
