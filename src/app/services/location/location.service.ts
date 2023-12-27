@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { runInThisContext } from 'vm';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocationService {
-  private apiKey = '29cc283340e8d9b14081cbdace743248';
+  private apiKey = environment.openWeatherApiKey;
 
   constructor(private http: HttpClient) { }
 

@@ -2,9 +2,9 @@
     <h2>Daily Forecast</h2>
     <ul class="horizontal-list">
         <li class="list-item" *ngFor="let forecast of dailyForecast">
-            <span>Temperature: {{forecast.temp.day}}&deg;C </span>
-            <span>Humidity: {{forecast.humidity}} </span>
-            <span>WindSpeed: {{forecast.wind_speed}} </span>
+            <p>{{forecast.temp.day}}&deg;C </p>
+            <p>Humidity: {{forecast.humidity}} </p>
+            <p>WindSpeed: {{forecast.wind_speed}} </p>
         </li>        
     </ul>
 </div>

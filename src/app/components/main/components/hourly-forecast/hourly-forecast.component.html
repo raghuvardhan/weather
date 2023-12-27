@@ -2,9 +2,9 @@
     <h2>Hourly Forecast</h2>
     <ul class="horizontal-list">
         <li *ngFor="let forecast of hourlyForecast | slice:0:12" class="list-item" >
-            <span>Temperature: {{forecast.temp}}&deg;C </span>
-            <span>Humidity: {{forecast.humidity}} </span>
-            <span>WindSpeed: {{forecast.wind_speed}} </span>
+            <p>{{forecast.temp}}&deg;C </p>
+            <p>Humidity: {{forecast.humidity}} </p>
+            <p>WindSpeed: {{forecast.wind_speed}} </p>
         </li>
     </ul>
 </div>
