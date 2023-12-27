@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { HourlyForecastService } from './services/hourly-forecast.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, SlicePipe } from '@angular/common';
 
 @Component({
   selector: 'app-hourly-forecast',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SlicePipe],
   templateUrl: './hourly-forecast.component.html',
   styleUrl: './hourly-forecast.component.css'
 })

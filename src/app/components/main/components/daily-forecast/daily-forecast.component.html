@@ -1,8 +1,8 @@
 <div class="daily-forecast">
     <h2>Daily Forecast</h2>
-    <ul>
-        <li *ngFor="let forecast of dailyForecast">
-            <span>Temperature: {{forecast.temp.day}} </span>
+    <ul class="horizontal-list">
+        <li class="list-item" *ngFor="let forecast of dailyForecast">
+            <span>Temperature: {{forecast.temp.day}}&deg;C </span>
             <span>Humidity: {{forecast.humidity}} </span>
             <span>WindSpeed: {{forecast.wind_speed}} </span>
         </li>        

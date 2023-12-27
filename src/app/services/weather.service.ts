@@ -14,7 +14,7 @@ export class WeatherService {
 
   getCurrentWeather() {
     return this.locationService.getCurrentLocation().pipe(map((data: any) => {
-        return this.http.get(this.weatherAPI + data[0].lat + '&lon=' + data[0].lon + '&appid=' + this.apiKey);
+        return this.http.get(this.weatherAPI + data[0].lat + '&lon=' + data[0].lon + '&appid=' + this.apiKey + '&units=metric');
       }));
   }
 

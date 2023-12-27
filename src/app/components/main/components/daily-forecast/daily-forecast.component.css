@@ -1,0 +1,11 @@
+/* Example Component CSS */
+.horizontal-list {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .list-item {
+    margin-right: 10px; /* Adjust spacing between items */
+    /* Additional styling for the items (e.g., padding, background color) */
+  }
+  
