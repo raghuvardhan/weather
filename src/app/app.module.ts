@@ -11,7 +11,6 @@ import { DailyForecastComponent } from './components/main/components/daily-forec
 import { HourlyForecastComponent } from './components/main/components/hourly-forecast/hourly-forecast.component';
 import { WeatherMapComponent } from './components/main/components/weather-map/weather-map.component';
 import { AirQualityComponent } from './components/main/components/air-quality/air-quality.component';
-import { SunriseSunsetComponent } from './components/main/components/sunrise-sunset/sunrise-sunset.component';
 import { UvIndexComponent } from './components/main/components/uv-index/uv-index.component';
 import { SidePanelComponent } from './components/side-panel/side-panel.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -33,7 +32,6 @@ import { FooterComponent } from './components/footer/footer.component';
     HourlyForecastComponent,
     WeatherMapComponent,
     AirQualityComponent,
-    SunriseSunsetComponent,
     UvIndexComponent,
     FooterComponent,
     SidePanelComponent
