@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 import { LocationService } from 'src/app/services/location/location.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SunriseSunsetService {
   private baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
-  private apiKey = '29cc283340e8d9b14081cbdace743248'; // Replace with your API key
+  private apiKey = environment.openWeatherApiKey; 
 
   constructor(private locationService:LocationService, private http: HttpClient) {}
 
