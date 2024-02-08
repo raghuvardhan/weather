@@ -1,10 +1,18 @@
-<div class="current-weather">
+
+@if (!showDetails) {<div class="current-weather card">
     <h2>Current Weather</h2>
-    <p>{{temperature}}&deg;C</p>
-    <p>Humidity: {{humidity}}</p>
-    <p>WindSpeed: {{windSpeed}}</p>
+    <p title="Temperature"><i class="fas fa-cloud"></i>{{temperature}}&deg;C</p>
+    <p title="Humidity"><i class="fas fa-humidity"></i>{{humidity}}</p>
+    <p title="Wind Speed"> <i class="fas fa-wind"></i>{{windSpeed}}</p>
     <p>Sunrise: {{sunrise}}</p>
     <p>Sunset: {{sunset}}</p>
+    <button (click)="showDetails = true">Details</button>
 </div>
-<app-air-quality></app-air-quality>
-<app-uv-index></app-uv-index>
+}
+@else {
+<div class="card">
+    <app-air-quality></app-air-quality>
+    <app-uv-index></app-uv-index>
+    <button (click)="showDetails = false">Details</button>
+</div>
+}

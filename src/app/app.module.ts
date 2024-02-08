@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
 import {HttpClientModule} from '@angular/common/http';
-import { ForecastComponent } from './forecast/forecast.component';
 import { CurrentWeatherComponent } from './components/main/components/current-weather/current-weather.component';
 import { DailyForecastComponent } from './components/main/components/daily-forecast/daily-forecast.component';
 import { HourlyForecastComponent } from './components/main/components/hourly-forecast/hourly-forecast.component';
@@ -20,7 +19,6 @@ import { FooterComponent } from './components/footer/footer.component';
   declarations: [
     AppComponent,
     WeatherComponent,
-    ForecastComponent,
   ],
   imports: [
     BrowserModule,

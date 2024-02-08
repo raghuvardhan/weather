@@ -12,6 +12,7 @@ import { UvIndexComponent } from '../uv-index/uv-index.component';
 })
 export class CurrentWeatherComponent {
 
+  showDetails: boolean = false;
   temperature: number = 0;
   humidity: number = 0;
   windSpeed: number = 0;

@@ -2,12 +2,14 @@
 .horizontal-list {
     display: flex;
     overflow-x: auto;
+    list-style: none;
   }
   
   .list-item {
     margin-right: 10px;
     width: 300px;
   margin: 20px; 
+  padding: 10px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Horizontal offset, vertical offset, blur radius, color */
