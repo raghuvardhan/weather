@@ -14,6 +14,7 @@ import { UvIndexComponent } from './components/main/components/uv-index/uv-index
 import { SidePanelComponent } from './components/side-panel/side-panel.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ForecastComponent } from './components/main/forecast/forecast.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FooterComponent } from './components/footer/footer.component';
     AirQualityComponent,
     UvIndexComponent,
     FooterComponent,
+    ForecastComponent,
     SidePanelComponent
   ],
   providers: [],

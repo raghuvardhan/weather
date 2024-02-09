@@ -8,11 +8,12 @@ import { runInThisContext } from 'vm';
 })
 export class LocationService {
   private apiKey = environment.openWeatherApiKey;
+  public location: string = 'Bangalore';
 
   constructor(private http: HttpClient) { }
 
   getCurrentLocation() {
-    return this.http.get('https://api.openweathermap.org/geo/1.0/direct?q=Bangalore&limit=1&appid=' + this.apiKey);
+    return this.http.get('https://api.openweathermap.org/geo/1.0/direct?q='+this.location+'&limit=1&appid=' + this.apiKey);
   }
 
 }
