@@ -12,6 +12,11 @@ import { LocationService } from 'src/app/services/location/location.service';
 })
 export class SearchComponent {
   public location: string = "";
-  constructor(public location$: LocationService)
-  {}
+
+  constructor(public location$: LocationService){}
+
+  public changeLocation()
+  {
+    this.location$.changeLocation(this.location);
+  }
 }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { WeatherService } from 'src/app/services/weather.service';
 import { AirQualityComponent } from '../air-quality/air-quality.component';
 import { UvIndexComponent } from '../uv-index/uv-index.component';
+import { LocationService } from 'src/app/services/location/location.service';
 
 @Component({
   selector: 'app-current-weather',
@@ -19,22 +20,23 @@ export class CurrentWeatherComponent {
   sunrise!: string;
   sunset!: string;
 
-  constructor(private weatherService: WeatherService) { }
+  constructor(private weatherService: WeatherService, private locationService: LocationService) { }
 
   ngOnInit() {
+    this.locationService.currentLocation.subscribe((location) => {
       this.weatherService.getCurrentWeather().subscribe((data: any) => {    
-        data.subscribe((data: any) => {
-          console.log(data);
-          this.temperature = data.main.temp;
-          this.humidity = data.main.humidity;
-          this.windSpeed = data.wind.speed;
-          const sunriseDate = new Date(data.sys.sunrise * 1000);
-          const sunsetDate = new Date(data.sys.sunset * 1000);
-          this.sunrise = sunriseDate.toLocaleTimeString();
-          this.sunset = sunsetDate.toLocaleTimeString();
-        });
-      }
-      );
+      data.subscribe((data: any) => {
+        this.temperature = data.main.temp;
+        this.humidity = data.main.humidity;
+        this.windSpeed = data.wind.speed;
+        const sunriseDate = new Date(data.sys.sunrise * 1000);
+        const sunsetDate = new Date(data.sys.sunset * 1000);
+        this.sunrise = sunriseDate.toLocaleTimeString();
+        this.sunset = sunsetDate.toLocaleTimeString();
+      });
+    }
+    );
+  });
   }
 
 }
